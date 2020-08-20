@@ -132,6 +132,7 @@ export default {
     })
 
     if (
+      this._hasInit &&
       this.$select.val() &&
       (typeof this.currentValue === 'undefined' ||
       Array.isArray(this.currentValue) && !this.currentValue.length)
@@ -185,7 +186,7 @@ export default {
     _initDefaultValue () {
       this.$nextTick(() => {
         this.setSelects(Array.isArray(this.currentValue) ?
-          this.currentValue : [this.currentValue], true)
+          this.currentValue : [this.currentValue], null, true)
       })
     },
 

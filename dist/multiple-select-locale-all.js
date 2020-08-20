@@ -1,17 +1,19 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('jquery')) :
   typeof define === 'function' && define.amd ? define(['jquery'], factory) :
-  (global = global || self, factory(global.jQuery));
-}(this, function ($) { 'use strict';
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.jQuery));
+}(this, (function ($) { 'use strict';
 
-  $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
+  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+
+  var $__default = /*#__PURE__*/_interopDefaultLegacy($);
 
   /**
    * Multiple Select en-US translation
    * Author: Zhixin Wen<wenzhixin2010@gmail.com>
    */
 
-  $.fn.multipleSelect.locales['en-US'] = {
+  $__default['default'].fn.multipleSelect.locales['en-US'] = {
     formatSelectAll: function formatSelectAll() {
       return '[Select all]';
     },
@@ -25,14 +27,14 @@
       return 'No matches found';
     }
   };
-  $.extend($.fn.multipleSelect.defaults, $.fn.multipleSelect.locales['en-US']);
+  $__default['default'].extend($__default['default'].fn.multipleSelect.defaults, $__default['default'].fn.multipleSelect.locales['en-US']);
 
   /**
    * Multiple Select es-ES translation
    * Author: Zhixin Wen<wenzhixin2010@gmail.com>
    */
 
-  $.fn.multipleSelect.locales['es-ES'] = {
+  $__default['default'].fn.multipleSelect.locales['es-ES'] = {
     formatSelectAll: function formatSelectAll() {
       return '[Seleccionar todo]';
     },
@@ -46,14 +48,35 @@
       return 'No se encontraron coincidencias';
     }
   };
-  $.extend($.fn.multipleSelect.defaults, $.fn.multipleSelect.locales['es-ES']);
+  $__default['default'].extend($__default['default'].fn.multipleSelect.defaults, $__default['default'].fn.multipleSelect.locales['es-ES']);
+
+  /**
+   * Multiple Select fr-FR translation
+   * Author: Francis Perron <francis@hivetek.com>
+   */
+
+  $__default['default'].fn.multipleSelect.locales['fr-FR'] = {
+    formatSelectAll: function formatSelectAll() {
+      return '[Tout sélectionner]';
+    },
+    formatAllSelected: function formatAllSelected() {
+      return 'Tous sélectionnés';
+    },
+    formatCountSelected: function formatCountSelected(count, total) {
+      return count + ' de ' + total + ' sélectionnés';
+    },
+    formatNoMatchesFound: function formatNoMatchesFound() {
+      return 'Aucun résultat';
+    }
+  };
+  $__default['default'].extend($__default['default'].fn.multipleSelect.defaults, $__default['default'].fn.multipleSelect.locales['fr-FR']);
 
   /**
    * Multiple Select it-IT translation
    * Author: Giuseppe Lodi Rizzini
    */
 
-  $.fn.multipleSelect.locales['it-IT'] = {
+  $__default['default'].fn.multipleSelect.locales['it-IT'] = {
     formatSelectAll: function formatSelectAll() {
       return '[Seleziona tutti]';
     },
@@ -67,14 +90,35 @@
       return 'Nessun risultato';
     }
   };
-  $.extend($.fn.multipleSelect.defaults, $.fn.multipleSelect.locales['it-IT']);
+  $__default['default'].extend($__default['default'].fn.multipleSelect.defaults, $__default['default'].fn.multipleSelect.locales['it-IT']);
+
+  /**
+   * Multiple Select vi-VN translation
+   * Author: hoangbaovu <ineo.vn>
+   */
+
+  $__default['default'].fn.multipleSelect.locales['vi-VN'] = {
+    formatSelectAll: function formatSelectAll() {
+      return '[Tất cả]';
+    },
+    formatAllSelected: function formatAllSelected() {
+      return 'Chọn tất cả';
+    },
+    formatCountSelected: function formatCountSelected(count, total) {
+      return 'Đã chọn ' + count + ' trong ' + total;
+    },
+    formatNoMatchesFound: function formatNoMatchesFound() {
+      return 'Không tìm thấy kết quả.';
+    }
+  };
+  $__default['default'].extend($__default['default'].fn.multipleSelect.defaults, $__default['default'].fn.multipleSelect.locales['vi-VN']);
 
   /**
    * Multiple Select zh-CN translation
    * Author: Zhixin Wen<wenzhixin2010@gmail.com>
    */
 
-  $.fn.multipleSelect.locales['zh-CN'] = {
+  $__default['default'].fn.multipleSelect.locales['zh-CN'] = {
     formatSelectAll: function formatSelectAll() {
       return '[全选]';
     },
@@ -88,14 +132,14 @@
       return '没有找到记录';
     }
   };
-  $.extend($.fn.multipleSelect.defaults, $.fn.multipleSelect.locales['zh-CN']);
+  $__default['default'].extend($__default['default'].fn.multipleSelect.defaults, $__default['default'].fn.multipleSelect.locales['zh-CN']);
 
   /**
    * Multiple Select zh-TW translation
    * Author: Zhixin Wen<wenzhixin2010@gmail.com>
    */
 
-  $.fn.multipleSelect.locales['zh-TW'] = {
+  $__default['default'].fn.multipleSelect.locales['zh-TW'] = {
     formatSelectAll: function formatSelectAll() {
       return '[全選]';
     },
@@ -109,6 +153,6 @@
       return '沒有找到記錄';
     }
   };
-  $.extend($.fn.multipleSelect.defaults, $.fn.multipleSelect.locales['zh-TW']);
+  $__default['default'].extend($__default['default'].fn.multipleSelect.defaults, $__default['default'].fn.multipleSelect.locales['zh-TW']);
 
-}));
+})));

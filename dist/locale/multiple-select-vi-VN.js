@@ -9,24 +9,24 @@
   var $__default = /*#__PURE__*/_interopDefaultLegacy($);
 
   /**
-   * Multiple Select es-ES translation
-   * Author: Zhixin Wen<wenzhixin2010@gmail.com>
+   * Multiple Select vi-VN translation
+   * Author: hoangbaovu <ineo.vn>
    */
 
-  $__default['default'].fn.multipleSelect.locales['es-ES'] = {
+  $__default['default'].fn.multipleSelect.locales['vi-VN'] = {
     formatSelectAll: function formatSelectAll() {
-      return '[Seleccionar todo]';
+      return '[Tất cả]';
     },
     formatAllSelected: function formatAllSelected() {
-      return 'Todos seleccionados';
+      return 'Chọn tất cả';
     },
     formatCountSelected: function formatCountSelected(count, total) {
-      return count + ' de ' + total + ' seleccionado';
+      return 'Đã chọn ' + count + ' trong ' + total;
     },
     formatNoMatchesFound: function formatNoMatchesFound() {
-      return 'No se encontraron coincidencias';
+      return 'Không tìm thấy kết quả.';
     }
   };
-  $__default['default'].extend($__default['default'].fn.multipleSelect.defaults, $__default['default'].fn.multipleSelect.locales['es-ES']);
+  $__default['default'].extend($__default['default'].fn.multipleSelect.defaults, $__default['default'].fn.multipleSelect.locales['vi-VN']);
 
 })));

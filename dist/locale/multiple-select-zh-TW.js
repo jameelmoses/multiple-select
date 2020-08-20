@@ -1,17 +1,19 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('jquery')) :
   typeof define === 'function' && define.amd ? define(['jquery'], factory) :
-  (global = global || self, factory(global.jQuery));
-}(this, function ($) { 'use strict';
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.jQuery));
+}(this, (function ($) { 'use strict';
 
-  $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
+  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+
+  var $__default = /*#__PURE__*/_interopDefaultLegacy($);
 
   /**
    * Multiple Select zh-TW translation
    * Author: Zhixin Wen<wenzhixin2010@gmail.com>
    */
 
-  $.fn.multipleSelect.locales['zh-TW'] = {
+  $__default['default'].fn.multipleSelect.locales['zh-TW'] = {
     formatSelectAll: function formatSelectAll() {
       return '[全選]';
     },
@@ -25,6 +27,6 @@
       return '沒有找到記錄';
     }
   };
-  $.extend($.fn.multipleSelect.defaults, $.fn.multipleSelect.locales['zh-TW']);
+  $__default['default'].extend($__default['default'].fn.multipleSelect.defaults, $__default['default'].fn.multipleSelect.locales['zh-TW']);
 
-}));
+})));
