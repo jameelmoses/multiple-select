@@ -70,7 +70,7 @@ class MultipleSelect {
     // restore class and title from select element
     this.$parent = $(`
       <div class="ms-parent ${el.getAttribute('class') || ''}"
-      title="${el.getAttribute('title') || ''}" />
+      title="${el.getAttribute('title') || ''}" aria-hidden="true" />
     `)
 
     // add placeholder to choice button
@@ -304,7 +304,7 @@ class MultipleSelect {
       `)
     }
 
-    html.push('<ul></ul>')
+    html.push('<ul role="group"></ul>')
 
     this.$drop.html(html.join(''))
     this.$ul = this.$drop.find('>ul')
